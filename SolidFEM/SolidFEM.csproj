@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Class1.cs" />
+    <Compile Include="Classes\Class2.cs" />
     <Compile Include="Components\MyComponent1.cs" />
     <Compile Include="SolidFEMComponent.cs" />
     <Compile Include="SolidFEMInfo.cs" />
