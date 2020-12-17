@@ -164,6 +164,9 @@ namespace SolidFEM.Components
 
 
                 }
+                // Something is not working here...
+                // Something about creating the elements whith vertices not being sorted... The error could be in the sorting in Element.cs
+                //  
                 tree.AddRange(eList, new Grasshopper.Kernel.Data.GH_Path(i));
             }
 
