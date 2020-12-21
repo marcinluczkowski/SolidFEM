@@ -58,7 +58,7 @@ namespace SolidFEM.Components
                 n.Point = pt;
                 nodes.Add(n);
             }
-            */
+            
 
             nodes.Add(new Node(1, "3D node", b.Vertices[0].Location));
             nodes.Add(new Node(2, "3D node", b.Vertices[1].Location));
@@ -68,7 +68,7 @@ namespace SolidFEM.Components
             nodes.Add(new Node(6, "3D node", b.Vertices[5].Location));
             nodes.Add(new Node(7, "3D node", b.Vertices[6].Location));
             nodes.Add(new Node(8, "3D node", b.Vertices[7].Location));
-
+*/
             Element el = new Element();
             el.ID = 0;
             el.name = "8node3D";

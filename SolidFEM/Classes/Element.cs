@@ -26,12 +26,12 @@ namespace SolidFEM.Classes
                 List<Point3d> vertices = new List<Point3d>();
                 foreach (Node n in nodes)
                 {
-                    vertices.Add(n.Point);
+                    vertices.Add(n.point);
                 }
                 return vertices;
             }
         }
-        
+
 
 
 
@@ -60,21 +60,21 @@ namespace SolidFEM.Classes
             // Calculate the center point
             double sumX = 0;
             double sumY = 0;
-            double sumZ = 0; 
-            foreach(Node n in unsortedNodes)
+            double sumZ = 0;
+            foreach (Node n in unsortedNodes)
             {
                 sumX += n.point.X;
                 sumY += n.point.Y;
                 sumZ += n.point.Z;
             }
-            Point3d centerPt = new Point3d( sumX/ unsortedNodes.Count, sumY / unsortedNodes.Count, sumZ / unsortedNodes.Count) ;
+            Point3d centerPt = new Point3d(sumX / unsortedNodes.Count, sumY / unsortedNodes.Count, sumZ / unsortedNodes.Count);
 
             // If points are below centerPt,
             var bottomNodes = new List<Node>();
             var topNodes = new List<Node>();
 
             // Assign the nodes in top and bottom list
-            foreach(Node n in unsortedNodes)
+            foreach (Node n in unsortedNodes)
             {
                 if (n.point.Z > centerPt.Z)
                 {
@@ -106,29 +106,31 @@ namespace SolidFEM.Classes
             {
                 this.nodes[i].Point = sortedVertices[i];
             }
-            #endregion
+
 
         }
 
-              
 
-        private void GrahamScan(ref List<Point3d> pts, ref  List<Point3d> selPts)
+
+        private void GrahamScan(ref List<Point3d> pts, ref List<Point3d> selPts)
         {
-            if(pts.Count > 0)
+            if (pts.Count > 0)
             {
                 var pt = pts[0];
 
-            Node[] lowerPoints = unsortedNodes.ToArray();
+                Node[] lowerPoints = unsortedNodes.ToArray();
 
-            double[] angles = new double[points.Length];
+                double[] angles = new double[points.Length];
 
-            for (int i = 0; i < points.Length; i++)
+                for (int i = 0; i < points.Length; i++)
 
-                angles[i] = Math.Atan2(points[i].point.Y, points[i].point.X);
+                    angles[i] = Math.Atan2(points[i].point.Y, points[i].point.X);
 
-            Array.Sort(angles, points);
-            */
-            return sortedNodes;
+                Array.Sort(angles, points);
+
+                return sortedNodes;
+            }
         }
     }
 }
+
