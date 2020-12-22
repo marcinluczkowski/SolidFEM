@@ -72,6 +72,7 @@ namespace SolidFEM.Components
             el.ID = 0;
             el.name = "8node3D";
             el.nodes = nodes;
+            el.SortVerticesByGrahamScan();
 
 
             info.Add("change brep box into fel"); ;

@@ -49,7 +49,6 @@ namespace SolidFEM.Components
                 foreach (Node n in el.nodes)
                 {
                     vList.Add(n.point);
-                    vList.Add(n.point);
                 }
                 m.Vertices.AddVertices(vList); // Add vertices to the mesh
 

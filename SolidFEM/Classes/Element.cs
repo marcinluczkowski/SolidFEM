@@ -106,7 +106,7 @@ namespace SolidFEM.Classes
             for (int i = 0; i < this.nodes.Count; i++)
             {
                 this.nodes[i].point = sortedVertices[i];
-                this.nodes[i].point = sortedVertices[i];
+                //this.nodes[i].point = sortedVertices[i]; Delete this if everything works. 
             }
             #endregion
 

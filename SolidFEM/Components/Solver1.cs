@@ -26,7 +26,7 @@ namespace SolidFEM.Components
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddGenericParameter("element","el","single element", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Element","el","single element", GH_ParamAccess.item);
         }
 
         /// <summary>
